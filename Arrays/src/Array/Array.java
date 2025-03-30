@@ -8,7 +8,7 @@ public class Array {
 /*------------------------------ΠΙΝΑΚΑΣ ΜΕ ΑΥΤΟΚΙΝΗΤΑ-------------------------------------------*/
 	    
 	    System.out.println("----ΜΟΝΟΔΙΑΣΤΑΤΟΣ ΠΙΝΑΚΑΣ ΜΕ ΑΥΤΟΚΙΝΗΤΑ----");
-	    String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};					//Δημιουργεί Εναν πίνακα με ονομα cars, 4 θέσεων με 4 μάρκες μεσα
+	    String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};							//Δημιουργεί Εναν πίνακα με ονομα cars, 4 θέσεων με 4 μάρκες μεσα
 	    		for (int i = 0; i < cars.length; i++) {
 	    			System.out.println(cars[i]);
 	    		}
@@ -18,11 +18,11 @@ public class Array {
 	    System.out.println("----ΠΙΝΑΚΑΣ ΜΕ ΙΝΤ (ΕΙΣΑΓΩΓΗ ΑΠΟ ΤΟ ΠΛΗΚΤΡΟΛΟΓΙΟ)----\n");
 	    			System.out.println("Δώστε τις διαστάσεις του πίνακα:");
 	    Scanner in = new Scanner(System.in);  								//Δημιουργεί ενα Scanner object
-	    int size=in.nextInt();												//Παίρνει απο το πληκτρολόγιο το μηκος του πίνακα
+	    int size=in.nextInt();										//Παίρνει απο το πληκτρολόγιο το μηκος του πίνακα
 	    int[] myIntArray = new int[size]; 									//Δημιουργει εναν πίνακα myIntArray τύπου Int, μεγέθους size
 	    		for (int i = 0; i < size; i++) {
 	    			System.out.println("\nΔώστε το "+i+"o στοιχείο του πίνακα");
-	    			myIntArray[i]=in.nextInt();								//Παίρνει απο το πληκτρολόγιο το i στοιχειο του πίνακα
+	    			myIntArray[i]=in.nextInt();							//Παίρνει απο το πληκτρολόγιο το myIntArray[i] στοιχειο του πίνακα
 	    		}
 	    			System.out.println("\nΔωσατε τις παρακάτω τιμές στον πίνακα:");
 			    for (int i = 0; i < size; i++) {							//Εμφανίζει τον πίνακα
@@ -36,9 +36,10 @@ public class Array {
 
 	    System.out.println("----ΠΙΝΑΚΑΣ ΜΕ STRING (ΕΙΣΑΓΩΓΗ ΑΠΟ ΤΟ ΠΛΗΚΤΡΟΛΟΓΙΟ)----\n");
 	    			System.out.println("Δώστε τις διαστάσεις του πίνακα:");
-	    int sizeStr=in.nextInt();												//Παίρνει απο το πληκτρολόγιο το μηκος του πίνακα
-	    String[] myStringArray = new String[sizeStr]; 							//Δημιουργει εναν πίνακα myIntArray τύπου Int, μεγέθους size
-	    		for(int i=0; i<sizeStr; i++) {									// ----SOS----- Εδω υπάρχει πρόβλημα, πηδάει την πρώτη λούπα
+	    int sizeStr=in.nextInt();										//Παίρνει απο το πληκτρολόγιο το μηκος του πίνακα
+	    in.nextLine();															// !--- TIP ------! Οταν υπάρχει nextLine() μετα από nextInt() η java παρακάμπτει την πρώτη κλήση της μεθόφου με αποτέλσμα να πυδάει την πρώτη εκτέλεση της in.nextLine() Που βρίσκεται μέσα στη for
+	    String[] myStringArray = new String[sizeStr]; 							//Δημιουργει εναν πίνακα myIntArray τύπου Int, μεγέθους size										
+	    		for(int i=0; i<sizeStr; i++) {								// ----SOS----- Εδω υπάρχει πρόβλημα, πηδάει την πρώτη λούπα
 	    			System.out.println("\nΔώστε το "+i+"o στοιχείο του πίνακα");
 	    			myStringArray[i]=in.nextLine();
 	    		}
@@ -53,10 +54,10 @@ public class Array {
 /*--------------------------------------------ΤΕΛΟΣ ΜΟΝΟΔΙΑΣΤΑΤΩΝ ΠΙΝΑΚΩΝ-------------------------------------------*/
 		System.out.println("----ΠΟΛΥΔΙΑΣΤΑΤΟΣ ΠΙΝΑΚΑΣ ΜΕ STRING (ΕΙΣΑΓΩΓΗ ΑΠΟ ΤΟ ΠΛΗΚΤΡΟΛΟΓΙΟ)----\n");
 		System.out.println("Δώστε τις διαστάσεις του πίνακα: \nΜήκος: ");
-	    int sizeX=in.nextInt();												//Παίρνει απο το πληκτρολόγιο το μηκος του πίνακα
+	    int sizeX=in.nextInt();										//Παίρνει απο το πληκτρολόγιο το μηκος του πίνακα
 		System.out.println("Πλάτος:");
-	    int sizeY=in.nextInt();												//Παίρνει απο το πληκτρολόγιο το πλατος του πίνακα
-	    int[][] myStringDoubleArray = new int[sizeX][sizeY]; 				//<a> εναν πίνακα myIntArray τύπου Int, μεγέθους size
+	    int sizeY=in.nextInt();										//Παίρνει απο το πληκτρολόγιο το πλατος του πίνακα
+	    int[][] myStringDoubleArray = new int[sizeX][sizeY]; 						//<a> εναν πίνακα myIntArray τύπου Int, μεγέθους size
 	    		for(int i=0; i<sizeX; i++) {
 	    			for(int j=0; j<sizeY; j++) {	
 	    				System.out.println("\nΓραμμή: "+i+",στήλη"+j);
